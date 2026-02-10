@@ -32,10 +32,6 @@ public class EmployeeController {
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
     }
 
-    @Operation(
-            summary = "Buscar funcionários",
-            description = "Responsável por retornar a lista de todos os funcionários cadastrados"
-    )
     @GetMapping
     public ResponseEntity<List<EmployeeResponseDTO>> findAll() {
         return ResponseEntity.ok(service.findAll());

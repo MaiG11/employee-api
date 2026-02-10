@@ -24,7 +24,7 @@ public class EmployeeService implements IEmployeeService {
     @Override
     public EmployeeResponseDTO create(EmployeeRequestDTO dto) {
 
-        Employee employee = new Employee(dto.getFirstName(), dto.getEmail());
+        Employee employee = new Employee(dto.firstName(), dto.email());
 
         Employee employeeSaved = employeeRepository.save(employee);
 
@@ -38,8 +38,8 @@ public class EmployeeService implements IEmployeeService {
         Employee employee = employeeRepository.findById(id)
                 .orElseThrow(EntityNotFoundException::new);
 
-        employee.setFirstName(dto.getFirstName());
-        employee.setEmail    (dto.getEmail());
+        employee.setFirstName(dto.firstName());
+        employee.setEmail    (dto.email());
 
         return new EmployeeResponseDTO(employee.getId(), employee.getFirstName(), employee.getEmail()
         );
