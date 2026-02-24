@@ -6,8 +6,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import br.com.tiago.schermack.projeto_teste_automatizado.dto.EmployeeRequestDTO;
 import br.com.tiago.schermack.projeto_teste_automatizado.entity.Employee;
 import br.com.tiago.schermack.projeto_teste_automatizado.repository.EmployeeRepository;
 import jakarta.transaction.Transactional;
